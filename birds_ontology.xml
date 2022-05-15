@@ -1,0 +1,1761 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://test.org/trabajo_pajaros.owl"
+         xmlns="http://test.org/trabajo_pajaros.owl#">
+
+<owl:Ontology rdf:about="http://test.org/trabajo_pajaros.owl"/>
+
+<owl:ObjectProperty rdf:about="#IS_MENTIONED_BY">
+  <rdfs:domain rdf:resource="#Bird"/>
+  <rdfs:range rdf:resource="#Publication"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#MENTIONS">
+  <rdfs:domain rdf:resource="#Publication"/>
+  <rdfs:range rdf:resource="#Bird"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#DBPEDIA_URL">
+  <rdfs:domain rdf:resource="#Dbpedia"/>
+  <rdfs:range rdf:resource="#Bird"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#PUBLICATION_URL">
+  <rdfs:domain rdf:resource="#Pub_url"/>
+  <rdfs:range rdf:resource="#Publication"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#PUBLICATION_DATE">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Bird">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Publication">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Dbpedia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pub_url">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<Publication rdf:about="#pub_1.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://dantallmansbirdblog.blogspot.com/  "/>
+  <MENTIONS rdf:resource="#green-winged_teal"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saturday,_March_19,_2022_</PUBLICATION_DATE>
+</Publication>
+
+<Pub_url rdf:about="#https://dantallmansbirdblog.blogspot.com/  ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Pub_url>
+
+<Bird rdf:about="#green-winged_teal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_1.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Green-winged_teal"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Green-winged_teal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Green-winged_teal</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_10.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.trevorsbirding.com/ "/>
+  <MENTIONS rdf:resource="#cockatoo"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#parrot"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28th_November,_2020_</PUBLICATION_DATE>
+</Publication>
+
+<Pub_url rdf:about="#https://www.trevorsbirding.com/ ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Pub_url>
+
+<Bird rdf:about="#cockatoo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_10.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Cockatoo"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Cockatoo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Cockatoo</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#species:">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_10.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Ludiortyx"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_8.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_9.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Ludiortyx">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Ludiortyx</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#parrot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_10.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Parrot"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_9.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Parrot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Parrot</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_2.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.shorebirder.com/"/>
+  <MENTIONS rdf:resource="#gull"/>
+  <MENTIONS rdf:resource="#(hope,_2002)"/>
+  <MENTIONS rdf:resource="#peregrine_falcon"/>
+  <MENTIONS rdf:resource="#ring-billed_gull"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friday,_February_25,_2022</PUBLICATION_DATE>
+</Publication>
+
+<Pub_url rdf:about="#https://www.shorebirder.com/">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Pub_url>
+
+<Bird rdf:about="#gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_2.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Gull"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_3.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Gull</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#(hope,_2002)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_2.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Lamarqueavis"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Lamarqueavis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Lamarqueavis</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#peregrine_falcon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_2.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Peregrine_falcon"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Peregrine_falcon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Peregrine_falcon</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#ring-billed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_2.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Ring-billed_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Ring-billed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Ring-billed_gull</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_3.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.shorebirder.com/"/>
+  <MENTIONS rdf:resource="#branta"/>
+  <MENTIONS rdf:resource="#gull"/>
+  <MENTIONS rdf:resource="#iceland_gull"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunday,_February_6,_2022_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#branta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_3.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Branta"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Branta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Branta</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#iceland_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_3.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Iceland_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Iceland_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Iceland_gull</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_4.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.shorebirder.com/ "/>
+  <MENTIONS rdf:resource="#american_bittern"/>
+  <MENTIONS rdf:resource="#black-crowned_night_heron"/>
+  <MENTIONS rdf:resource="#bonaparte's_gull"/>
+  <MENTIONS rdf:resource="#c957t"/>
+  <MENTIONS rdf:resource="#common_tern"/>
+  <MENTIONS rdf:resource="#egret"/>
+  <MENTIONS rdf:resource="#glossy_ibis"/>
+  <MENTIONS rdf:resource="#great_horned_owl"/>
+  <MENTIONS rdf:resource="#gull"/>
+  <MENTIONS rdf:resource="#hawk"/>
+  <MENTIONS rdf:resource="#(hope,_2002)"/>
+  <MENTIONS rdf:resource="#laughing_gull"/>
+  <MENTIONS rdf:resource="#least_sandpiper"/>
+  <MENTIONS rdf:resource="#little_blue_heron"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#manu_(bird)"/>
+  <MENTIONS rdf:resource="#marsh_wren"/>
+  <MENTIONS rdf:resource="#nelson's_sparrow"/>
+  <MENTIONS rdf:resource="#passer"/>
+  <MENTIONS rdf:resource="#saltmarsh_sparrow"/>
+  <MENTIONS rdf:resource="#scarlet_tanager"/>
+  <MENTIONS rdf:resource="#scoter"/>
+  <MENTIONS rdf:resource="#surf_scoter"/>
+  <MENTIONS rdf:resource="#swainson's_thrush"/>
+  <MENTIONS rdf:resource="#tern"/>
+  <MENTIONS rdf:resource="#triller"/>
+  <MENTIONS rdf:resource="#(bonaparte,_1855)"/>
+  <MENTIONS rdf:resource="#yellow-bellied_sapsucker"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday,_November_3,_2021_</PUBLICATION_DATE>
+</Publication>
+
+<Pub_url rdf:about="#https://www.shorebirder.com/ ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Pub_url>
+
+<Bird rdf:about="#american_bittern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/American_bittern"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/American_bittern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/American_bittern</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#black-crowned_night_heron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Black-crowned_night_heron"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Black-crowned_night_heron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Black-crowned_night_heron</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#bonaparte's_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Bonaparte's_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Bonaparte's_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bonaparte's_gull</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#c957t">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/C957T"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/C957T">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/C957T</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#common_tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Common_tern"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Common_tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Common_tern</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#egret">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Egret"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Egret">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Egret</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#glossy_ibis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Glossy_ibis"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Glossy_ibis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Glossy_ibis</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#great_horned_owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Great_horned_owl"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Great_horned_owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Great_horned_owl</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#hawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Hawk"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Hawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hawk</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#laughing_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Laughing_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Laughing_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Laughing_gull</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#least_sandpiper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Least_sandpiper"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Least_sandpiper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Least_sandpiper</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#little_blue_heron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Little_blue_heron"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Little_blue_heron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Little_blue_heron</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#manu_(bird)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Manu_(bird)"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Manu_(bird)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Manu_(bird)</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#marsh_wren">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Marsh_wren"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Marsh_wren">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Marsh_wren</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#nelson's_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Nelson's_sparrow"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Nelson's_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Nelson's_sparrow</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#passer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Passer"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Passer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Passer</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#saltmarsh_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Saltmarsh_sparrow"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Saltmarsh_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Saltmarsh_sparrow</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#scarlet_tanager">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Scarlet_tanager"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Scarlet_tanager">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Scarlet_tanager</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#scoter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Scoter"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Scoter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Scoter</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#surf_scoter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Surf_scoter"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Surf_scoter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Surf_scoter</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#swainson's_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Swainson's_thrush"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Swainson's_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Swainson's_thrush</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Tern"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Tern</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#triller">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Triller"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Triller">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Triller</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#(bonaparte,_1855)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Trocaz_pigeon"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Trocaz_pigeon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Trocaz_pigeon</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#yellow-bellied_sapsucker">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_4.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Yellow-bellied_sapsucker"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Yellow-bellied_sapsucker">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Yellow-bellied_sapsucker</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_5.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.shorebirder.com/ "/>
+  <MENTIONS rdf:resource="#alpine_accentor"/>
+  <MENTIONS rdf:resource="#american_golden_plover"/>
+  <MENTIONS rdf:resource="#american_robin"/>
+  <MENTIONS rdf:resource="#atthis_(bird)"/>
+  <MENTIONS rdf:resource="#balearic_shearwater"/>
+  <MENTIONS rdf:resource="#black-headed_gull"/>
+  <MENTIONS rdf:resource="#bonelli's_eagle"/>
+  <MENTIONS rdf:resource="#common_buzzard"/>
+  <MENTIONS rdf:resource="#common_redshank"/>
+  <MENTIONS rdf:resource="#common_ringed_plover"/>
+  <MENTIONS rdf:resource="#corn_bunting"/>
+  <MENTIONS rdf:resource="#cory's_shearwater"/>
+  <MENTIONS rdf:resource="#eagle"/>
+  <MENTIONS rdf:resource="#eurasian_dotterel"/>
+  <MENTIONS rdf:resource="#eurasian_sparrowhawk"/>
+  <MENTIONS rdf:resource="#european_golden_plover"/>
+  <MENTIONS rdf:resource="#gannet"/>
+  <MENTIONS rdf:resource="#garden_warbler"/>
+  <MENTIONS rdf:resource="#great_shearwater"/>
+  <MENTIONS rdf:resource="#great_skua"/>
+  <MENTIONS rdf:resource="#ground_tit"/>
+  <MENTIONS rdf:resource="#gull"/>
+  <MENTIONS rdf:resource="#hawk"/>
+  <MENTIONS rdf:resource="#hen_harrier"/>
+  <MENTIONS rdf:resource="#kentish_plover"/>
+  <MENTIONS rdf:resource="#lark"/>
+  <MENTIONS rdf:resource="#long-eared_owl"/>
+  <MENTIONS rdf:resource="#genus:"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#meadow_pipit"/>
+  <MENTIONS rdf:resource="#northern_gannet"/>
+  <MENTIONS rdf:resource="#owl"/>
+  <MENTIONS rdf:resource="#painted_sandgrouse"/>
+  <MENTIONS rdf:resource="#peregrine_falcon"/>
+  <MENTIONS rdf:resource="#pipit"/>
+  <MENTIONS rdf:resource="#red_kite"/>
+  <MENTIONS rdf:resource="#red-legged_thrush"/>
+  <MENTIONS rdf:resource="#redwing"/>
+  <MENTIONS rdf:resource="#richard's_pipit"/>
+  <MENTIONS rdf:resource="#sardinian_warbler"/>
+  <MENTIONS rdf:resource="#scopoli's_shearwater"/>
+  <MENTIONS rdf:resource="#seabird"/>
+  <MENTIONS rdf:resource="#shearwater"/>
+  <MENTIONS rdf:resource="#short-toed_snake_eagle"/>
+  <MENTIONS rdf:resource="#slender-billed_gull"/>
+  <MENTIONS rdf:resource="#song_thrush"/>
+  <MENTIONS rdf:resource="#southern_lapwing"/>
+  <MENTIONS rdf:resource="#_botha"/>
+  <MENTIONS rdf:resource="#taiwan_thrush"/>
+  <MENTIONS rdf:resource="#vulture"/>
+  <MENTIONS rdf:resource="#water_pipit"/>
+  <MENTIONS rdf:resource="#water_rail"/>
+  <MENTIONS rdf:resource="#white_lion"/>
+  <MENTIONS rdf:resource="#white_wagtail"/>
+  <MENTIONS rdf:resource="#yellow-legged_gull"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday,_November_1,_2021_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#alpine_accentor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Alpine_accentor"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Alpine_accentor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Alpine_accentor</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#american_golden_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/American_golden_plover"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/American_golden_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/American_golden_plover</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#american_robin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/American_robin"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/American_robin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/American_robin</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#atthis_(bird)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Atthis_(bird)"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Atthis_(bird)">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Atthis_(bird)</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#balearic_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Balearic_shearwater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Balearic_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Balearic_shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#black-headed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Black-headed_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Black-headed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Black-headed_gull</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#bonelli's_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Bonelli's_eagle"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Bonelli's_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Bonelli's_eagle</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#common_buzzard">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Common_buzzard"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Common_buzzard">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Common_buzzard</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#common_redshank">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Common_redshank"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Common_redshank">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Common_redshank</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#common_ringed_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Common_ringed_plover"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Common_ringed_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Common_ringed_plover</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#corn_bunting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Corn_bunting"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Corn_bunting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Corn_bunting</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#cory's_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Cory's_shearwater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Cory's_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Cory's_shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Eagle"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Eagle</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#eurasian_dotterel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Eurasian_dotterel"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Eurasian_dotterel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Eurasian_dotterel</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#eurasian_sparrowhawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Eurasian_sparrowhawk"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Eurasian_sparrowhawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Eurasian_sparrowhawk</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#european_golden_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/European_golden_plover"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/European_golden_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/European_golden_plover</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#gannet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Gannet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Gannet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Gannet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#garden_warbler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Garden_warbler"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Garden_warbler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Garden_warbler</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#great_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Great_shearwater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Great_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Great_shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#great_skua">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Great_skua"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Great_skua">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Great_skua</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#ground_tit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Ground_tit"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Ground_tit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Ground_tit</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#hen_harrier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Hen_harrier"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Hen_harrier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hen_harrier</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#kentish_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Kentish_plover"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Kentish_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Kentish_plover</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#lark">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Lark"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Lark">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Lark</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#long-eared_owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Long-eared_owl"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Long-eared_owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Long-eared_owl</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#genus:">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Ludiortyx"/>
+</Bird>
+
+<Bird rdf:about="#meadow_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Meadow_pipit"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Meadow_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Meadow_pipit</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#northern_gannet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Northern_gannet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Northern_gannet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Northern_gannet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Owl"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Owl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Owl</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#painted_sandgrouse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Painted_sandgrouse"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Painted_sandgrouse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Painted_sandgrouse</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Pipit"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Pipit</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#red_kite">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Red_kite"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Red_kite">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Red_kite</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#red-legged_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Red-legged_thrush"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Red-legged_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Red-legged_thrush</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#redwing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Redwing"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Redwing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Redwing</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#richard's_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Richard's_pipit"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Richard's_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Richard's_pipit</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#sardinian_warbler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Sardinian_warbler"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Sardinian_warbler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Sardinian_warbler</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#scopoli's_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Scopoli's_shearwater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Scopoli's_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Scopoli's_shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#seabird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Seabird"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Seabird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Seabird</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Shearwater"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#short-toed_snake_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Short-toed_snake_eagle"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Short-toed_snake_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Short-toed_snake_eagle</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#slender-billed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Slender-billed_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Slender-billed_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Slender-billed_gull</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#song_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Song_thrush"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Song_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Song_thrush</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#southern_lapwing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Southern_lapwing"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Southern_lapwing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Southern_lapwing</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#_botha">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Spizocorys"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Spizocorys">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Spizocorys</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#taiwan_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Taiwan_thrush"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Taiwan_thrush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Taiwan_thrush</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#vulture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Vulture"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Vulture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Vulture</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#water_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Water_pipit"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Water_pipit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Water_pipit</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#water_rail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Water_rail"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Water_rail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Water_rail</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#white_lion">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/White_lion"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/White_lion">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/White_lion</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#white_wagtail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/White_wagtail"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/White_wagtail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/White_wagtail</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#yellow-legged_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_5.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Yellow-legged_gull"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Yellow-legged_gull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Yellow-legged_gull</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_6.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.shorebirder.com/ "/>
+  <MENTIONS rdf:resource="#andean_avocet"/>
+  <MENTIONS rdf:resource="#guianan_cock-of-the-rock"/>
+  <MENTIONS rdf:resource="#avocet"/>
+  <MENTIONS rdf:resource="#blue-footed_booby"/>
+  <MENTIONS rdf:resource="#blue-headed_parrot"/>
+  <MENTIONS rdf:resource="#chestnut-crested_cotinga"/>
+  <MENTIONS rdf:resource="#cinclodes"/>
+  <MENTIONS rdf:resource="#cock-of-the-rock"/>
+  <MENTIONS rdf:resource="#collared_inca"/>
+  <MENTIONS rdf:resource="#purple_sandpiper"/>
+  <MENTIONS rdf:resource="#dacnis"/>
+  <MENTIONS rdf:resource="#eagle"/>
+  <MENTIONS rdf:resource="#elaenia"/>
+  <MENTIONS rdf:resource="#green_honeycreeper"/>
+  <MENTIONS rdf:resource="#gull"/>
+  <MENTIONS rdf:resource="#hoatzin"/>
+  <MENTIONS rdf:resource="#honeycreeper"/>
+  <MENTIONS rdf:resource="#hooded_mountain_tanager"/>
+  <MENTIONS rdf:resource="#humboldt_penguin"/>
+  <MENTIONS rdf:resource="#hummingbird"/>
+  <MENTIONS rdf:resource="#inca_tern"/>
+  <MENTIONS rdf:resource="#silky-tailed_nightjar"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#macaw"/>
+  <MENTIONS rdf:resource="#nighthawk"/>
+  <MENTIONS rdf:resource="#owl"/>
+  <MENTIONS rdf:resource="#parrot"/>
+  <MENTIONS rdf:resource="#pelican"/>
+  <MENTIONS rdf:resource="#peruvian_diving_petrel"/>
+  <MENTIONS rdf:resource="#peruvian_thick-knee"/>
+  <MENTIONS rdf:resource="#puna_plover"/>
+  <MENTIONS rdf:resource="#red-necked_phalarope"/>
+  <MENTIONS rdf:resource="#sand-coloured_nighthawk"/>
+  <MENTIONS rdf:resource="#seabird"/>
+  <MENTIONS rdf:resource="#shearwater"/>
+  <MENTIONS rdf:resource="#shining_sunbeam"/>
+  <MENTIONS rdf:resource="#solitary_eagle"/>
+  <MENTIONS rdf:resource="#sooty_shearwater"/>
+  <MENTIONS rdf:resource="#tern"/>
+  <MENTIONS rdf:resource="#trogon"/>
+  <MENTIONS rdf:resource="#white-throated_toucan"/>
+  <MENTIONS rdf:resource="#wire-crested_thorntail"/>
+  <MENTIONS rdf:resource="#yellow-bellied_dacnis"/>
+  <MENTIONS rdf:resource="#yellow-browed_sparrow"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday,_October_13,_2021_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#andean_avocet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Andean_avocet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Andean_avocet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Andean_avocet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#guianan_cock-of-the-rock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Guianan_cock-of-the-rock"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Guianan_cock-of-the-rock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Guianan_cock-of-the-rock</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#avocet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Avocet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Avocet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Avocet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#blue-footed_booby">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Blue-footed_booby"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Blue-footed_booby">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Blue-footed_booby</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#blue-headed_parrot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Blue-headed_parrot"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Blue-headed_parrot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Blue-headed_parrot</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#chestnut-crested_cotinga">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Chestnut-crested_cotinga"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Chestnut-crested_cotinga">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Chestnut-crested_cotinga</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#cinclodes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Cinclodes"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Cinclodes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Cinclodes</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#cock-of-the-rock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Cock-of-the-rock"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Cock-of-the-rock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Cock-of-the-rock</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#collared_inca">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Collared_inca"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Collared_inca">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Collared_inca</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#purple_sandpiper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Purple_sandpiper"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Purple_sandpiper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Purple_sandpiper</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#dacnis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Dacnis"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Dacnis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Dacnis</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#elaenia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Elaenia"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Elaenia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Elaenia</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#green_honeycreeper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Green_honeycreeper"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Green_honeycreeper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Green_honeycreeper</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#hoatzin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Hoatzin"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Hoatzin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hoatzin</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#honeycreeper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Honeycreeper"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Honeycreeper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Honeycreeper</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#hooded_mountain_tanager">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Hooded_mountain_tanager"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Hooded_mountain_tanager">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hooded_mountain_tanager</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#humboldt_penguin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Humboldt_penguin"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Humboldt_penguin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Humboldt_penguin</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#hummingbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Hummingbird"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Hummingbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Hummingbird</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#inca_tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Inca_tern"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Inca_tern">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Inca_tern</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#silky-tailed_nightjar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Silky-tailed_nightjar"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Silky-tailed_nightjar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Silky-tailed_nightjar</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#macaw">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Macaw"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Macaw">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Macaw</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#nighthawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Nighthawk"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Nighthawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Nighthawk</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#pelican">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Pelican"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Pelican">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Pelican</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#peruvian_diving_petrel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Peruvian_diving_petrel"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Peruvian_diving_petrel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Peruvian_diving_petrel</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#peruvian_thick-knee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Peruvian_thick-knee"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Peruvian_thick-knee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Peruvian_thick-knee</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#puna_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Puna_plover"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Puna_plover">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Puna_plover</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#red-necked_phalarope">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Red-necked_phalarope"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Red-necked_phalarope">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Red-necked_phalarope</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#sand-coloured_nighthawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Sand-coloured_nighthawk"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Sand-coloured_nighthawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Sand-coloured_nighthawk</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#shining_sunbeam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Shining_sunbeam"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Shining_sunbeam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Shining_sunbeam</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#solitary_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Solitary_eagle"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Solitary_eagle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Solitary_eagle</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#sooty_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Sooty_shearwater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Sooty_shearwater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Sooty_shearwater</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#trogon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Trogon"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Trogon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Trogon</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#white-throated_toucan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/White-throated_toucan"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/White-throated_toucan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/White-throated_toucan</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#wire-crested_thorntail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Wire-crested_thorntail"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Wire-crested_thorntail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Wire-crested_thorntail</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#yellow-bellied_dacnis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Yellow-bellied_dacnis"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Yellow-bellied_dacnis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Yellow-bellied_dacnis</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#yellow-browed_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_6.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Yellow-browed_sparrow"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Yellow-browed_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Yellow-browed_sparrow</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_7.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.trevorsbirding.com/ "/>
+  <MENTIONS rdf:resource="#collared_sparrowhawk"/>
+  <MENTIONS rdf:resource="#house_sparrow"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#musk_lorikeet"/>
+  <MENTIONS rdf:resource="#parrot"/>
+  <MENTIONS rdf:resource="#purple-crowned_lorikeet"/>
+  <MENTIONS rdf:resource="#rainbow_lorikeet"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd_December,_2020_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#collared_sparrowhawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Collared_sparrowhawk"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Collared_sparrowhawk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Collared_sparrowhawk</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#house_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/House_sparrow"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/House_sparrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/House_sparrow</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#musk_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Musk_lorikeet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Musk_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Musk_lorikeet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#purple-crowned_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Purple-crowned_lorikeet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Purple-crowned_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Purple-crowned_lorikeet</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#rainbow_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_7.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Rainbow_lorikeet"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Rainbow_lorikeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Rainbow_lorikeet</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_8.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.trevorsbirding.com/ "/>
+  <MENTIONS rdf:resource="#budgerigar"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#ovenbird"/>
+  <MENTIONS rdf:resource="#rosy-faced_lovebird"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st_December,_2020_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#budgerigar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_8.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Budgerigar"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Budgerigar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Budgerigar</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#ovenbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_8.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Ovenbird"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Ovenbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Ovenbird</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#rosy-faced_lovebird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_8.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Rosy-faced_lovebird"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Rosy-faced_lovebird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Rosy-faced_lovebird</rdfs:label>
+</Dbpedia>
+
+<Publication rdf:about="#pub_9.txt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <PUBLICATION_URL rdf:resource="#https://www.trevorsbirding.com/ "/>
+  <MENTIONS rdf:resource="#australian_ringneck"/>
+  <MENTIONS rdf:resource="#beautiful_sunbird"/>
+  <MENTIONS rdf:resource="#species:"/>
+  <MENTIONS rdf:resource="#mayr's_honeyeater"/>
+  <MENTIONS rdf:resource="#parrot"/>
+  <PUBLICATION_DATE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29th_November,_2020_</PUBLICATION_DATE>
+</Publication>
+
+<Bird rdf:about="#australian_ringneck">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_9.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Australian_ringneck"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Australian_ringneck">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Australian_ringneck</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#beautiful_sunbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_9.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Beautiful_sunbird"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Beautiful_sunbird">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Beautiful_sunbird</rdfs:label>
+</Dbpedia>
+
+<Bird rdf:about="#mayr's_honeyeater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <IS_MENTIONED_BY rdf:resource="#pub_9.txt"/>
+  <DBPEDIA_URL rdf:resource="#http://dbpedia.org/resource/Mayr's_honeyeater"/>
+</Bird>
+
+<Dbpedia rdf:about="#http://dbpedia.org/resource/Mayr's_honeyeater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dbpedia.org/resource/Mayr's_honeyeater</rdfs:label>
+</Dbpedia>
+
+
+</rdf:RDF>
