@@ -12,7 +12,7 @@ Tenemos dos **objetivos principales**:
 la mayoría de especies mencionadas en cada publicación. A su vez, cada resultado
 ha de ser asociado con su enlace de la Dbpedia.
 
-2. Crear una ontología: Una vez completado el paso anterior, se organizarán los
+2. **Crear una ontología**: Una vez completado el paso anterior, se organizarán los
 resultados en una ontología donde cada especie de pájaro será un individual que
 tendrá asociado su enlace de la Dbpedia y la publicación (o publicaciones) donde ha
 sido mencionado.
