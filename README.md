@@ -6,9 +6,9 @@ Disponemos de distintas publicaciones extraídas de tres blogs relacionados con 
 observación de pájaros. Cada una de ellas ha sido guardada en un fichero txt
 junto a su fecha de publicación y el url de su correspondiente blog. 
 
-Tenemos dos objetivos principales:
+Tenemos dos **objetivos principales**:
 
-1. Encontrar los pájaros: Será necesario desarrollar un programa capaz de detectar
+1. **Encontrar los pájaros**: Será necesario desarrollar un programa capaz de detectar
 la mayoría de especies mencionadas en cada publicación. A su vez, cada resultado
 ha de ser asociado con su enlace de la Dbpedia.
 
